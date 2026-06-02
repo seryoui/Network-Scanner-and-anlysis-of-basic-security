@@ -1,7 +1,7 @@
-# NetScan Enterprise - README
+# NetScan - README
 
 ## Overview
-**NetScan Enterprise v2.0** is a professional-grade network intelligence platform with:
+**NetScan** is a professional-grade network intelligence platform with:
 - Advanced network discovery & OS fingerprinting
 - Multi-threaded concurrent scanning (100+ hosts)
 - YARA-based malware & payload detection
