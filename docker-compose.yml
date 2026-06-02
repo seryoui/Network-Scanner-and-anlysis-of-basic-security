@@ -1,0 +1,70 @@
+version: '3.9'
+
+services:
+  netscan:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: netscan-enterprise
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_ENV=development
+      - LOG_LEVEL=INFO
+      - ADMIN_API_KEY=${ADMIN_API_KEY:-changeme}
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - netscan-network
+    # Uncomment for host network access (Linux only)
+    # network_mode: "host"
+
+  netscan-prod:
+    image: ghcr.io/your-org/netscan-enterprise:latest
+    container_name: netscan-prod
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_ENV=production
+      - LOG_LEVEL=WARNING
+      - ADMIN_API_KEY=${ADMIN_API_KEY:-changeme}
+    restart: always
+    volumes:
+      - netscan-data:/app/data
+      - netscan-logs:/app/logs
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "10"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - netscan-network
+    profiles:
+      - prod
+
+volumes:
+  netscan-data:
+  netscan-logs:
+
+networks:
+  netscan-network:
+    driver: bridge

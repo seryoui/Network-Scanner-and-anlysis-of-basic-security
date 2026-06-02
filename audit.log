@@ -1,0 +1,13 @@
+{"timestamp": "2026-06-02T10:12:05.466108", "user": "netscan_", "action": "start_scan", "status": "SUCCESS", "details": "Network: 127.0.0.1/32", "ip": "127.0.0.1"}
+{"timestamp": "2026-06-02T10:12:12.925326", "user": "netscan_", "action": "scan_complete", "status": "SUCCESS", "details": "Found 1 hosts", "ip": "N/A"}
+{"timestamp": "2026-06-02T14:02:46.966531", "user": "asd", "action": "start_scan", "status": "SUCCESS", "details": "Network: 172.18.96.0/20", "ip": "127.0.0.1"}
+{"timestamp": "2026-06-02T14:02:58.286727", "user": "asd", "action": "scan_complete", "status": "SUCCESS", "details": "Found 1 hosts", "ip": "N/A"}
+{"timestamp": "2026-06-02T14:17:39.473288", "user": "James", "action": "start_scan", "status": "SUCCESS", "details": "Network: 172.18.96.0/20", "ip": "127.0.0.1"}
+{"timestamp": "2026-06-02T14:17:50.768705", "user": "James", "action": "scan_complete", "status": "SUCCESS", "details": "Found 1 hosts", "ip": "N/A"}
+{"timestamp": "2026-06-02T14:18:53.562600", "user": "James", "action": "start_scan", "status": "SUCCESS", "details": "Network: 172.18.96.0/20", "ip": "127.0.0.1"}
+{"timestamp": "2026-06-02T14:35:51.610850", "user": "James", "action": "start_scan", "status": "SUCCESS", "details": "Network: 172.18.96.0/20", "ip": "127.0.0.1"}
+{"timestamp": "2026-06-02T14:36:02.750694", "user": "James", "action": "scan_complete", "status": "SUCCESS", "details": "Found 1 hosts", "ip": "N/A"}
+{"timestamp": "2026-06-02T14:54:27.852682", "user": "James", "action": "start_scan", "status": "SUCCESS", "details": "Network: 192.168.1.0/24", "ip": "127.0.0.1"}
+{"timestamp": "2026-06-02T14:54:31.837912", "user": "James", "action": "scan_complete", "status": "SUCCESS", "details": "Found 0 hosts", "ip": "N/A"}
+{"timestamp": "2026-06-02T14:54:37.914427", "user": "James", "action": "start_scan", "status": "SUCCESS", "details": "Network: 172.18.96.0/20", "ip": "127.0.0.1"}
+{"timestamp": "2026-06-02T14:54:48.783993", "user": "James", "action": "scan_complete", "status": "SUCCESS", "details": "Found 1 hosts", "ip": "N/A"}

@@ -1,0 +1,5 @@
+flask>=2.0.0
+flask-cors>=3.0.10
+flask-limiter>=3.3.0
+waitress>=2.1.0
+yara-python>=4.5.0

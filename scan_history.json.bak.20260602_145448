@@ -1,0 +1,199 @@
+{
+  "scans": [
+    {
+      "timestamp": "2026-05-24T15:37:22.344616",
+      "network": "192.168.56.0/24",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "192.168.56.1",
+          "hostname": "LAPTOP-HQ9D2VJT",
+          "mac": "Unknown MAC",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-05-24T15:39:34.913136",
+      "network": "192.168.56.0/24",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "192.168.56.1",
+          "hostname": "LAPTOP-HQ9D2VJT",
+          "mac": "Unknown MAC",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-05-25T13:26:07.053234",
+      "network": "192.168.56.0/24",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "192.168.56.1",
+          "hostname": "LAPTOP-HQ9D2VJT",
+          "mac": "Unknown MAC",
+          "os": "Windows",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-05-25T13:26:18.697050",
+      "network": "192.168.56.0/24",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "192.168.56.1",
+          "hostname": "LAPTOP-HQ9D2VJT",
+          "mac": "Unknown MAC",
+          "os": "Windows",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "user": "asd",
+      "timestamp": "2026-05-25T13:31:31.750608",
+      "network": "192.168.56.0/24",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "192.168.56.1",
+          "hostname": "LAPTOP-HQ9D2VJT",
+          "mac": "Unknown MAC",
+          "os": "Windows",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "user": "asd",
+      "timestamp": "2026-05-30T16:03:02.782638",
+      "network": "172.18.0.0/24",
+      "hosts_found": 2,
+      "results": [
+        {
+          "ip": "172.18.0.1",
+          "hostname": "Unknown Host",
+          "mac": "Unknown MAC",
+          "os": "Linux/Unix",
+          "open_ports": []
+        },
+        {
+          "ip": "172.18.0.2",
+          "hostname": "756fd99fd84b",
+          "mac": "Unknown MAC",
+          "os": "Linux/Unix",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "user": "asd",
+      "timestamp": "2026-05-30T16:03:33.148138",
+      "network": "172.18.0.0/24",
+      "hosts_found": 2,
+      "results": [
+        {
+          "ip": "172.18.0.1",
+          "hostname": "Unknown Host",
+          "mac": "Unknown MAC",
+          "os": "Linux/Unix",
+          "open_ports": []
+        },
+        {
+          "ip": "172.18.0.2",
+          "hostname": "756fd99fd84b",
+          "mac": "Unknown MAC",
+          "os": "Linux/Unix",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "scan_id": "9d2de4f3-0905-4899-aab7-59299dcfceb1",
+      "user": "netscan_",
+      "timestamp": "2026-06-02T10:12:12.921749",
+      "network": "127.0.0.1/32",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "127.0.0.1",
+          "hostname": "kubernetes.docker.internal",
+          "mac": "Unknown MAC",
+          "os": "Windows",
+          "open_ports": [
+            {
+              "port": 135,
+              "banner": "Open"
+            },
+            {
+              "port": 445,
+              "banner": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scan_id": "8012d24a-5147-4dbe-a71b-5304556ced7d",
+      "user": "asd",
+      "timestamp": "2026-06-02T14:02:58.279926",
+      "network": "172.18.96.0/20",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "172.18.96.1",
+          "hostname": "LAPTOP-HQ9D2VJT.mshome.net",
+          "mac": "Unknown MAC",
+          "os": "Windows",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "scan_id": "3fe3eefb-fada-445d-9cbd-c125df952ce9",
+      "user": "James",
+      "timestamp": "2026-06-02T14:17:50.763490",
+      "network": "172.18.96.0/20",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "172.18.96.1",
+          "hostname": "LAPTOP-HQ9D2VJT.mshome.net",
+          "mac": "Unknown MAC",
+          "os": "Windows",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "scan_id": "ae8e8cba-e845-4659-b12e-dbb93c727cd9",
+      "user": "James",
+      "timestamp": "2026-06-02T14:36:02.743321",
+      "network": "172.18.96.0/20",
+      "hosts_found": 1,
+      "results": [
+        {
+          "ip": "172.18.96.1",
+          "hostname": "LAPTOP-HQ9D2VJT.mshome.net",
+          "mac": "Unknown MAC",
+          "os": "Windows",
+          "open_ports": []
+        }
+      ]
+    },
+    {
+      "scan_id": "96f1e514-29de-4deb-8ef5-1b7c67de43c9",
+      "user": "James",
+      "timestamp": "2026-06-02T14:54:31.831416",
+      "network": "192.168.1.0/24",
+      "hosts_found": 0,
+      "results": []
+    }
+  ],
+  "threats": []
+}

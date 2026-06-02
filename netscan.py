@@ -84,7 +84,7 @@ def parse_network(arg=None):
 def ping(ip):
     """
     Pings a single IP address.
-    Returns the IP if online (responds to ping), otherwise None.
+    Returns (ip, ttl) if online, otherwise (None, None).
     """
     ip = str(ip)
     system = platform.system().lower()
@@ -95,59 +95,128 @@ def ping(ip):
     try:
         result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=2)
         if re.search(r"ttl", result.stdout, re.IGNORECASE):
-            return ip
+            ttl_match = re.search(r"ttl=(\d+)", result.stdout, re.IGNORECASE)
+            ttl = int(ttl_match.group(1)) if ttl_match else None
+            return ip, ttl
     except Exception:
-        return None
-    return None
+        return None, None
+    return None, None
+
+def grab_banner(ip, port):
+    """
+    Attempts to grab a service banner from an open port.
+    """
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(1.0)
+            s.connect((ip, port))
+            # Some services require a probe to send a banner
+            if port == 80:
+                s.sendall(b"HEAD / HTTP/1.1\r\nHost: " + ip.encode() + b"\r\n\r\n")
+            elif port == 443:
+                # SSL/TLS would need a wrapper, keeping it simple for now
+                return "HTTPS (SSL/TLS)"
+            
+            banner = s.recv(1024).decode(errors='ignore').strip()
+            if banner:
+                # Clean up the banner (take first line, remove non-printable)
+                banner = banner.split('\n')[0].strip()
+                return banner[:50] # Limit length
+    except Exception:
+        pass
+    return "Unknown Service"
 
 def scan_port(ip, port):
     """
     Checks if a specific TCP port is open on an IP.
+    Returns (port, banner) if open, otherwise None.
     """
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.settimeout(0.5)
             if s.connect_ex((ip, port)) == 0:
-                return port
+                banner = grab_banner(ip, port)
+                return port, banner
     except Exception:
         pass
     return None
+
+def get_os_from_ttl(ttl):
+    if ttl is None:
+        return "Unknown"
+    if ttl <= 64:
+        return "Linux/Unix"
+    elif ttl <= 128:
+        return "Windows"
+    elif ttl <= 255:
+        return "Solaris/Cisco"
+    return "Unknown"
 
 def scan_host(ip, ports=None):
     """
     Scans a host for online status and optionally scans ports.
     """
-    if ping(ip):
-        open_ports = []
+    online_ip, ttl = ping(ip)
+    if online_ip:
+        os_name = get_os_from_ttl(ttl)
+        open_ports_info = []
         if ports:
             for port in ports:
-                if scan_port(ip, port):
-                    open_ports.append(port)
-        return ip, open_ports
-    return None, []
+                port_result = scan_port(ip, port)
+                if port_result:
+                    open_ports_info.append(port_result)
+        return ip, os_name, open_ports_info
+    return None, None, []
+
+def get_arp_table():
+    """
+    Retrieves the ARP table from the system.
+    """
+    try:
+        output = subprocess.check_output("arp -a", shell=True, universal_newlines=True)
+        # Regex to find IP and MAC addresses
+        # Windows format: 192.168.1.1       00-11-22-33-44-55     dynamic
+        # Unix format: ? (192.168.1.1) at 00:11:22:33:44:55 [ether] on eth0
+        matches = re.findall(r'(\d+\.\d+\.\d+\.\d+).*?([0-9a-fA-F:-]{12,17})', output)
+        return {ip: mac for ip, mac in matches}
+    except Exception:
+        return {}
 
 def scan_network(network, ports=None):
     """
     Scans all hosts in the given network in parallel.
-    Returns a list of tuples (host, open_ports).
+    Returns a list of tuples (host, open_ports_info).
     """
     print(f"Scanning network: {network}")
     if ports:
         print(f"Scanning ports: {', '.join(map(str, ports))}")
     
+    # Try to get ARP table for faster/more reliable local discovery
+    arp_table = get_arp_table()
+    
     results = []
-    try:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
-            futures = {executor.submit(scan_host, str(ip), ports): ip for ip in network.hosts()}
-            for future in concurrent.futures.as_completed(futures):
-                try:
-                    host, open_ports = future.result()
-                    if host:
-                        results.append((host, open_ports))
-                except Exception:
-                    continue
-    except KeyboardInterrupt:
-        print("\nScan interrupted by user. Showing results so far...")
+    # Use ThreadPoolExecutor for concurrent scanning
+    with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
+        # Create a list of futures
+        futures = {executor.submit(scan_host, str(ip), ports): ip for ip in network.hosts()}
+        
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                host, os_name, open_ports = future.result()
+                if host:
+                    mac = arp_table.get(host, "Unknown MAC")
+                    results.append({
+                        'ip': host,
+                        'mac': mac,
+                        'os': os_name,
+                        'ports': open_ports
+                    })
+                    print(f"[+] Found host: {host} ({mac}) - OS: {os_name}")
+                    for p, b in open_ports:
+                        print(f"    - Port {p}: {b}")
+            except Exception as e:
+                pass
+    
     return results
 
 def show_help():
@@ -168,61 +237,37 @@ def show_help():
     )
 
 def main():
-    """
-    Main function: parses arguments, runs scan, prints results.
-    """
+    import argparse
+    parser = argparse.ArgumentParser(description="NetScan - Basic Network Scanner")
+    parser.add_argument("network", nargs="?", help="Network to scan (e.g., 192.168.1.0/24)")
+    parser.add_argument("--ports", help="Comma-separated list of ports to scan, or 'common'")
+    
+    args = parser.parse_args()
+    
     print_app_name()
-    args = sys.argv[1:]
     
-    ports = None
-    network_arg = None
-    
-    # Simple argument parsing
-    i = 0
-    while i < len(args):
-        if args[i] in ['-h', '--help']:
-            show_help()
-            return
-        elif args[i] in ['-p', '--ports']:
-            if i + 1 < len(args):
-                p_arg = args[i+1]
-                if p_arg.lower() == 'common':
-                    ports = [21, 22, 23, 25, 53, 80, 110, 135, 139, 443, 445, 3389]
-                else:
-                    try:
-                        ports = [int(p.strip()) for p in p_arg.split(',')]
-                    except ValueError:
-                        print(f"Error: Invalid ports format: {p_arg}")
-                        return
-                i += 1
-            else:
-                print("Error: -p/--ports requires an argument")
-                return
-        else:
-            network_arg = args[i]
-        i += 1
-
     try:
-        network = parse_network(network_arg)
+        network = parse_network(args.network)
     except Exception as e:
         print(f"Error: {e}")
-        show_help()
         return
 
-    try:
-        results = scan_network(network, ports)
-        print("\nScan Results:")
-        # Sort results by IP address
-        results.sort(key=lambda x: tuple(map(int, x[0].split('.'))))
-        
-        for host, open_ports in results:
-            if ports:
-                ports_str = f" [Open ports: {', '.join(map(str, open_ports)) if open_ports else 'none found'}]"
-                print(f"{host}{ports_str}")
-            else:
-                print(host)
-    except KeyboardInterrupt:
-        print("\nScan interrupted by user.")
+    ports = None
+    if args.ports == "common":
+        ports = [21, 22, 23, 25, 53, 80, 110, 135, 139, 443, 445, 3389]
+    elif args.ports:
+        ports = [int(p.strip()) for p in args.ports.split(",")]
+    
+    results = scan_network(network, ports)
+    
+    print("\nScan Summary:")
+    print("-" * 30)
+    print(f"Hosts found: {len(results)}")
+    for res in results:
+        print(f"IP: {res['ip']} ({res['mac']}) - OS: {res['os']}")
+        if res['ports']:
+            print(f"  Ports: {', '.join([str(p) for p, b in res['ports']])}")
+    print("-" * 30)
 
 if __name__ == "__main__":
     main()

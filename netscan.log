@@ -1,0 +1,156 @@
+2026-06-02 10:09:14,924 - __main__ - INFO - YARA rules loaded successfully from E:\New folder\project\netscan-app\signatures.yar
+2026-06-02 10:09:14,935 - __main__ - INFO - ================================================================================
+2026-06-02 10:09:14,935 - __main__ - INFO - NetScan Enterprise v2.0 - Starting
+2026-06-02 10:09:14,935 - __main__ - INFO - Starting server on http://0.0.0.0:8080
+2026-06-02 10:09:14,936 - __main__ - INFO - ================================================================================
+2026-06-02 10:09:16,352 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.149.15.148:8080
+2026-06-02 10:09:16,354 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-02 10:11:27,782 - __main__ - INFO - YARA rules loaded successfully from E:\New folder\project\netscan-app\signatures.yar
+2026-06-02 10:11:27,792 - __main__ - INFO - ================================================================================
+2026-06-02 10:11:27,793 - __main__ - INFO - NetScan Enterprise v2.0 - Starting
+2026-06-02 10:11:27,793 - __main__ - INFO - Starting server on http://0.0.0.0:8080
+2026-06-02 10:11:27,793 - __main__ - INFO - ================================================================================
+2026-06-02 10:11:29,112 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.149.15.148:8080
+2026-06-02 10:11:29,112 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-02 10:11:56,519 - __main__ - ERROR - Scan start error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-06-02 10:11:56,520 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 10:11:56] "[35m[1mPOST /api/scan HTTP/1.1[0m" 500 -
+2026-06-02 10:12:05,465 - __main__ - INFO - Starting scan on 127.0.0.1/32 by user netscan_
+2026-06-02 10:12:05,468 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 10:12:05] "POST /api/scan HTTP/1.1" 200 -
+2026-06-02 10:12:12,919 - __main__ - INFO - Scan complete. Found 1 active hosts.
+2026-06-02 10:12:14,339 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 10:12:14] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 13:59:28,753 - __main__ - INFO - YARA rules loaded successfully from E:\New folder\project\netscan-app\signatures.yar
+2026-06-02 13:59:28,762 - __main__ - INFO - ================================================================================
+2026-06-02 13:59:28,762 - __main__ - INFO - NetScan Enterprise v2.0 - Starting
+2026-06-02 13:59:28,763 - __main__ - INFO - Starting server on http://0.0.0.0:8080
+2026-06-02 13:59:28,763 - __main__ - INFO - ================================================================================
+2026-06-02 13:59:30,800 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.149.15.148:8080
+2026-06-02 13:59:30,801 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-02 13:59:58,993 - __main__ - INFO - YARA rules loaded successfully from E:\New folder\project\netscan-app\signatures.yar
+2026-06-02 13:59:59,002 - __main__ - INFO - ================================================================================
+2026-06-02 13:59:59,002 - __main__ - INFO - NetScan Enterprise v2.0 - Starting
+2026-06-02 13:59:59,003 - __main__ - INFO - Starting server on http://0.0.0.0:8080
+2026-06-02 13:59:59,003 - __main__ - INFO - ================================================================================
+2026-06-02 14:00:00,300 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.149.15.148:8080
+2026-06-02 14:00:00,302 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-02 14:00:07,931 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:00:07] "GET /api/health HTTP/1.1" 200 -
+2026-06-02 14:01:40,391 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:01:40] "GET / HTTP/1.1" 200 -
+2026-06-02 14:01:40,492 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:01:40] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:01:40,801 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:01:40] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:01:40,876 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:01:40] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:02:24,014 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:24] "GET / HTTP/1.1" 200 -
+2026-06-02 14:02:26,159 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:26] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-06-02 14:02:46,958 - __main__ - INFO - Starting scan on 172.18.96.0/20 by user asd
+2026-06-02 14:02:47,013 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:47] "POST /api/scan HTTP/1.1" 200 -
+2026-06-02 14:02:48,071 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:48] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:49,441 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:49] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:50,074 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:50] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:51,414 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:51] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:52,076 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:52] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:53,426 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:53] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:54,064 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:54] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:55,395 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:55] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:56,068 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:56] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:57,441 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:57] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:58,274 - __main__ - INFO - Scan complete. Found 1 active hosts.
+2026-06-02 14:02:58,460 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:58] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:02:58,827 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:02:58] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:17:31,978 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:31] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:17:35,167 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:35] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:17:38,252 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:38] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:17:38,486 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:38] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:17:39,473 - __main__ - INFO - Starting scan on 172.18.96.0/20 by user James
+2026-06-02 14:17:39,511 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:39] "POST /api/scan HTTP/1.1" 200 -
+2026-06-02 14:17:40,906 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:40] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:41,551 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:41] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:42,925 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:42] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:43,536 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:43] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:44,933 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:44] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:45,527 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:45] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:46,911 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:46] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:47,532 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:47] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:48,903 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:48] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:49,531 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:49] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:50,759 - __main__ - INFO - Scan complete. Found 1 active hosts.
+2026-06-02 14:17:50,837 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:50] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:17:51,115 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:17:51] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:18:05,870 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:18:05] "POST /api/yara-scan HTTP/1.1" 200 -
+2026-06-02 14:18:06,192 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:18:06] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:18:11,616 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:18:11] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:18:53,562 - __main__ - INFO - Starting scan on 172.18.96.0/20 by user James
+2026-06-02 14:18:53,583 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:18:53] "POST /api/scan HTTP/1.1" 200 -
+2026-06-02 14:24:26,520 - __main__ - INFO - YARA rules loaded successfully from E:\New folder\project\netscan-app\signatures.yar
+2026-06-02 14:24:26,530 - __main__ - INFO - ================================================================================
+2026-06-02 14:24:26,531 - __main__ - INFO - NetScan Enterprise v2.0 - Starting
+2026-06-02 14:24:26,531 - __main__ - INFO - Starting server on http://0.0.0.0:8080
+2026-06-02 14:24:26,531 - __main__ - INFO - ================================================================================
+2026-06-02 14:24:29,271 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.149.15.148:8080
+2026-06-02 14:24:29,271 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-02 14:24:48,349 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:24:48] "GET /api/health HTTP/1.1" 200 -
+2026-06-02 14:33:20,600 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:33:20] "GET /api/health HTTP/1.1" 200 -
+2026-06-02 14:33:22,090 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:33:22] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-06-02 14:34:17,701 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:34:17] "GET /api/health HTTP/1.1" 200 -
+2026-06-02 14:35:11,149 - __main__ - ERROR - Scan start error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-06-02 14:35:11,150 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:11] "[35m[1mPOST /api/scan HTTP/1.1[0m" 500 -
+2026-06-02 14:35:25,952 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:25] "GET / HTTP/1.1" 200 -
+2026-06-02 14:35:26,532 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:26] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-06-02 14:35:38,989 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:38] "GET / HTTP/1.1" 200 -
+2026-06-02 14:35:39,089 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:39] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:35:39,400 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:39] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:35:39,435 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:39] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:35:46,652 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:46] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:35:48,214 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:48] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:35:50,581 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:50] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:35:51,610 - __main__ - INFO - Starting scan on 172.18.96.0/20 by user James
+2026-06-02 14:35:51,638 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:51] "POST /api/scan HTTP/1.1" 200 -
+2026-06-02 14:35:52,979 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:52] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:35:53,653 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:53] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:35:54,964 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:54] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:35:55,660 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:55] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:35:57,005 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:57] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:35:57,655 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:57] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:35:59,021 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:59] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:35:59,660 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:35:59] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:36:00,992 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:36:00] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:36:01,656 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:36:01] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:36:02,740 - __main__ - INFO - Scan complete. Found 1 active hosts.
+2026-06-02 14:36:02,968 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:36:02] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:36:03,257 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:36:03] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:54:27,851 - __main__ - INFO - Starting scan on 192.168.1.0/24 by user James
+2026-06-02 14:54:27,901 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:27] "POST /api/scan HTTP/1.1" 200 -
+2026-06-02 14:54:28,926 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:28] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:30,301 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:30] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:31,081 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:31] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:31,809 - __main__ - INFO - Scan complete. Found 0 active hosts.
+2026-06-02 14:54:32,231 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:32] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:32,515 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:32] "GET /api/dashboard-stats HTTP/1.1" 200 -
+2026-06-02 14:54:36,175 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:36] "GET /api/local-network HTTP/1.1" 200 -
+2026-06-02 14:54:37,914 - __main__ - INFO - Starting scan on 172.18.96.0/20 by user James
+2026-06-02 14:54:37,942 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:37] "POST /api/scan HTTP/1.1" 200 -
+2026-06-02 14:54:38,978 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:38] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:40,293 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:40] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:40,969 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:40] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:42,311 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:42] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:42,975 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:42] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:44,331 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:44] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:44,981 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:44] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:46,291 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:46] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:46,970 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:46] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:48,275 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:48] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:48,774 - __main__ - INFO - Scan complete. Found 1 active hosts.
+2026-06-02 14:54:48,962 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:48] "GET /api/results HTTP/1.1" 200 -
+2026-06-02 14:54:49,294 - werkzeug - INFO - 127.0.0.1 - - [02/Jun/2026 14:54:49] "GET /api/dashboard-stats HTTP/1.1" 200 -

@@ -1,0 +1,22 @@
+{
+  "api_keys": [
+    "netscan_key_demo_1234567890abcdef",
+    "netscan_key_prod_1234567890abcdef"
+  ],
+  "max_hosts_per_scan": 1024,
+  "max_ports_per_host": 100,
+  "scan_timeout": 300,
+  "concurrent_workers": 100,
+  "enable_yara_scanning": true,
+  "enable_audit_logging": true,
+  "rate_limiting": {
+    "daily": 200,
+    "hourly": 50,
+    "per_scan": 10
+  },
+  "scan_options": {
+    "common_ports": [21, 22, 23, 25, 53, 80, 110, 135, 139, 443, 445, 3389],
+    "timeout_per_host": 2,
+    "timeout_per_port": 0.5
+  }
+}
